@@ -1,14 +1,16 @@
 #!/bin/bash
 
-recipe=
-title="No Title"
-gmail=
-gmail_password=
-kindle_email=
+set -e
+
+recipe=$RECIPE
+title=${TITLE:-No Title}
+gmail=$GMAIL
+gmail_password=$GMAIL_PASSWORD
+kindle_email=$KINDLE_EMAIL
 
 # account to access the contents (optional)
-username=
-password=
+username=$$USERNAME
+password=$PASSWORD
 
 while getopts "r:t:g:q:k:u:p:" o; do
     case "$o" in
